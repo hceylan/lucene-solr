@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Apache Solr Test Framework</name>
   <description>Apache Solr Test Framework</description>
-  <properties>
-    <module-directory>solr/test-framework</module-directory>
-    <build-directory>../build/solr-test-framework</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -52,9 +48,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory/>
     <resources>

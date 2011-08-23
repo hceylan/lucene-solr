@@ -50,7 +50,7 @@
     <module>xml-query-parser</module>
   </modules>
   <build>
-    <directory>../build/contrib/lucene-contrib-aggregator</directory>
+    <directory>../target/contrib/lucene-contrib-aggregator</directory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

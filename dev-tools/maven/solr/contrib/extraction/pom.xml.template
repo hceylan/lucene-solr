@@ -34,10 +34,6 @@
     Apache Solr Content Extraction Library integrates Apache Tika 
     content extraction framework into Solr
   </description>
-  <properties>
-    <module-directory>solr/contrib/extraction</module-directory>
-    <build-directory>../../build/contrib/extraction</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -90,9 +86,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

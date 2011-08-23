@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Join</name>
   <description>Lucene Join Module</description>
-  <properties>
-    <module-directory>lucene/contrib/join</module-directory>
-    <build-directory>../../build/contrib/join</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -59,9 +55,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

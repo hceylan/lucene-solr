@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Apache Solr Clustering</name>
   <description>Apache Solr Clustering</description>
-  <properties>
-    <module-directory>solr/contrib/clustering</module-directory>
-    <build-directory>../../build/contrib/clustering</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -115,9 +111,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

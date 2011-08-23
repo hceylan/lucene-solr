@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Test Framework</name>
   <description>Apache Lucene Java Test Framework</description>
-  <properties>
-    <module-directory>lucene/src/test-framework</module-directory>
-    <build-directory>../../build</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -51,8 +47,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/test-framework</outputDirectory>
     <sourceDirectory>.</sourceDirectory>
     <resources>
       <resource>

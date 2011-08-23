@@ -77,7 +77,6 @@
   </mailingLists>
   <inceptionYear>2006</inceptionYear>
   <build>
-    <directory>build/solr-parent</directory>
     <pluginManagement>
       <plugins>
         <plugin>

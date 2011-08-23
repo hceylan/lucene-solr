@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Core</name>
   <description>Apache Lucene Java Core</description>
-  <properties>
-    <module-directory>lucene</module-directory>
-    <build-directory>../build</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -53,9 +49,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>java</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
     <testResources>

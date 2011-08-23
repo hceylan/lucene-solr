@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Spellchecker</name>
   <description>Spell Checker</description>
-  <properties>
-    <module-directory>lucene/contrib/spellchecker</module-directory>
-    <build-directory>../../build/contrib/spellchecker</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -59,9 +55,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

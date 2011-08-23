@@ -33,10 +33,6 @@
   <description>
     High-performance single-document index to compare against Query
   </description>
-  <properties>
-    <module-directory>lucene/contrib/memory</module-directory>
-    <build-directory>../../build/contrib/memory</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -56,9 +52,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

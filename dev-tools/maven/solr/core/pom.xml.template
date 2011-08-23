@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Apache Solr Core</name>
   <description>Apache Solr Core</description>
-  <properties>
-    <module-directory>solr/core</module-directory>
-    <build-directory>../build/solr-maven</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -167,9 +163,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

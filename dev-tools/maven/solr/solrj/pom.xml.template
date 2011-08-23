@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Apache Solr Solrj</name>
   <description>Apache Solr Solrj</description>
-  <properties>
-    <module-directory>solr/solrj</module-directory>
-    <build-directory>../build/solr-solrj</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>org.apache.lucene</groupId>
@@ -81,9 +77,6 @@
     </dependency> 
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory/>
     <testResources/>

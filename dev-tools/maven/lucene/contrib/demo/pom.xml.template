@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Demo</name>
   <description>This is the demo for Apache Lucene Java</description>
-  <properties>
-    <module-directory>lucene/contrib/demo</module-directory>
-    <build-directory>../../build/contrib/demo</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -59,9 +55,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

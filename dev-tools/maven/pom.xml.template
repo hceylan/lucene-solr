@@ -357,7 +357,6 @@
     </dependencies>
   </dependencyManagement>
   <build>
-    <directory>lucene/build/lucene-solr-grandparent</directory>
     <pluginManagement>
       <plugins>
         <plugin>
@@ -689,7 +688,7 @@
                 </goals>
                 <configuration>
                   <file>solr/contrib/clustering/lib/carrot2-core-3.5.0.jar</file>
-                  <pomFile>lucene/build/lucene-solr-grandparent/solr-carrot2-core-pom.xml.template</pomFile>
+                  <pomFile>${project.build.directory}/solr-carrot2-core-pom.xml.template</pomFile>
                 </configuration>  
               </execution>
               <execution>

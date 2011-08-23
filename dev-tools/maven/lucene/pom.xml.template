@@ -36,7 +36,4 @@
     <module>src/test-framework</module>
     <module>contrib</module>
   </modules>
-  <build>
-    <directory>build/lucene-parent</directory>
-  </build>
 </project>

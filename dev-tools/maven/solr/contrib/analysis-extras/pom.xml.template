@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Apache Solr Analysis Extras</name>
   <description>Apache Solr Analysis Extras</description>
-  <properties>
-    <module-directory>solr/contrib/analysis-extras</module-directory>
-    <build-directory>../../build/contrib/analysis-extras</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -85,9 +81,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

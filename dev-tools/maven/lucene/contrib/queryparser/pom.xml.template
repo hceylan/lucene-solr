@@ -33,10 +33,6 @@
   <description>
     This is the Flexible Query Parser for apache lucene java
   </description>
-  <properties>
-    <module-directory>lucene/contrib/queryparser</module-directory>
-    <build-directory>../../build/contrib/queryparser</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -56,9 +52,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <resources>

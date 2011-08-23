@@ -31,10 +31,6 @@
   <packaging>jar</packaging>
   <name>Lucene Remote</name>
   <description>Remote Searchable based on RMI</description>
-  <properties>
-    <module-directory>lucene/contrib/remote</module-directory>
-    <build-directory>../../build/contrib/remote</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -54,9 +50,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>

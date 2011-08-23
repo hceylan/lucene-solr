@@ -33,10 +33,6 @@
   <description>
     This is the highlighter for apache lucene java
   </description>
-  <properties>
-    <module-directory>lucene/contrib/highlighter</module-directory>
-    <build-directory>../../build/contrib/highlighter</build-directory>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -66,9 +62,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${build-directory}</directory>
-    <outputDirectory>${build-directory}/classes/java</outputDirectory>
-    <testOutputDirectory>${build-directory}/classes/test</testOutputDirectory>
     <sourceDirectory>src/java</sourceDirectory>
     <testSourceDirectory>src/test</testSourceDirectory>
     <testResources>
