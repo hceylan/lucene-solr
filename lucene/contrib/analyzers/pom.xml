@@ -36,7 +36,7 @@
     <module>stempel</module>
   </modules>
   <build>
-    <directory>../../build/contrib/lucene-contrib-analyzers-aggregator</directory>
+    <directory>../../target/contrib/lucene-contrib-analyzers-aggregator</directory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
