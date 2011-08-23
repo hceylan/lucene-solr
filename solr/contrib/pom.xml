@@ -39,7 +39,7 @@
     <module>uima</module>
   </modules>
   <build>
-    <directory>../build/solr-contrib-aggregator</directory>
+    <directory>../target/solr-contrib-aggregator</directory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

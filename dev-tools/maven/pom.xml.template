@@ -500,71 +500,6 @@
       </plugins>
     </pluginManagement>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.gmaven</groupId>
-        <artifactId>gmaven-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>generate-timestamps</id>
-            <phase>validate</phase>
-            <goals>
-              <goal>execute</goal>
-            </goals>
-            <configuration>
-              <source>
-                project.properties['now.timestamp'] = "${maven.build.timestamp}"
-                project.properties['now.version'] = ("${maven.build.timestamp}" =~ /[- :]/).replaceAll(".")
-                project.properties['now.year'] = "${maven.build.timestamp}".substring(0, 4)
-              </source>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>buildnumber-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>validate</phase>
-            <goals>
-              <goal>create</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <doCheck>false</doCheck>
-          <doUpdate>false</doUpdate>
-          <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
-          <buildNumberPropertyName>svn.revision</buildNumberPropertyName>
-          <revisionOnScmFailure>NO-REVISION-AVAILABLE</revisionOnScmFailure>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-java-compat-version-and-maven-2.2.1</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireJavaVersion>
-                  <message>Java ${java.compat.version}+ is required.</message>
-                  <version>[${java.compat.version},)</version>
-                </requireJavaVersion>
-                <requireMavenVersion>
-                  <message>Maven 2.2.1+ is required.</message>
-                  <version>[2.2.1,)</version>
-                </requireMavenVersion>
-                <requirePluginVersions/>           
-              </rules>    
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      
       <!-- Adding OSGI metadata to the JAR without changing the packaging type. -->
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
@@ -780,5 +715,77 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+	  <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.gmaven</groupId>
+            <artifactId>gmaven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-timestamps</id>
+                <phase>validate</phase>
+                <goals>
+                  <goal>execute</goal>
+                </goals>
+                <configuration>
+                  <source>
+                    project.properties['now.timestamp'] = "${maven.build.timestamp}"
+                    project.properties['now.version'] = ("${maven.build.timestamp}" =~ /[- :]/).replaceAll(".")
+                    project.properties['now.year'] = "${maven.build.timestamp}".substring(0, 4)
+                  </source>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>buildnumber-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>validate</phase>
+                 <goals>
+                  <goal>create</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <doCheck>false</doCheck>
+              <doUpdate>false</doUpdate>
+              <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
+              <buildNumberPropertyName>svn.revision</buildNumberPropertyName>
+              <revisionOnScmFailure>NO-REVISION-AVAILABLE</revisionOnScmFailure>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-enforcer-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>enforce-java-compat-version-and-maven-2.2.1</id>
+                <goals>
+                  <goal>enforce</goal>
+                </goals>
+                <configuration>
+                  <rules>
+                    <requireJavaVersion>
+                      <message>Java ${java.compat.version}+ is required.</message>
+                      <version>[${java.compat.version},)</version>
+                    </requireJavaVersion>
+                    <requireMavenVersion>
+                      <message>Maven 2.2.1+ is required.</message>
+                      <version>[2.2.1,)</version>
+                    </requireMavenVersion>
+                    <requirePluginVersions/>           
+                  </rules>    
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 </project>
+  
