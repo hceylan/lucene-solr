@@ -74,12 +74,22 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-    </dependency> 
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>${project.version}</version>
+      <classifier>tests</classifier>
+      <scope>tests</scope>
+    </dependency>
   </dependencies>
   <build>
     <sourceDirectory>src/java</sourceDirectory>
-    <testSourceDirectory/>
-    <testResources/>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

@@ -35,7 +35,6 @@
     <module>core</module>
     <module>solrj</module>
     <module>webapp</module>
-    <module>test-framework</module>
     <module>contrib</module>
   </modules>
   <properties>

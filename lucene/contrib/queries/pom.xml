@@ -41,8 +41,9 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>lucene-test-framework</artifactId>
+      <artifactId>lucene-core</artifactId>
       <version>${project.version}</version>
+      <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -61,9 +62,6 @@
     <testResources>
       <testResource>
         <directory>${project.build.testSourceDirectory}</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
       </testResource>
     </testResources>
   </build>
