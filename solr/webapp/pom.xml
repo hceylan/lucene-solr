@@ -149,6 +149,7 @@
         <artifactId>maven-jetty-plugin</artifactId>
         <configuration>
           <scanIntervalSeconds>10</scanIntervalSeconds>
+          <webAppSourceDirectory>web</webAppSourceDirectory>
           <connectors>
             <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
               <port>8080</port>
@@ -157,9 +158,6 @@
           </connectors>
           <webAppConfig>
             <contextPath>/</contextPath>
-            <baseResource implementation="org.mortbay.resource.ResourceCollection">
-              <resources>web</resources>
-            </baseResource>
           </webAppConfig>
         </configuration>
       </plugin>
